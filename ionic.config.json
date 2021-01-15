@@ -1,0 +1,8 @@
+{
+  "name": "Payday",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue",
+  "id": "82b2c2d2"
+}
