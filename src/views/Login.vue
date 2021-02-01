@@ -1,39 +1,53 @@
 <template>
   <ion-page>
-    <ion-content :fullscreen="true" class="full-color">
-      <ion-grid class="ion-margin">
-        <ion-row class="ion-margin ion-justify-content-left ion-align-items-end" style="height:150px">
-          <img src="/assets/logo.png">
-        </ion-row>
-        <ion-row class="ion-margin-start ion-margin-bottom ion-justify-content-left">
-          <h1>Login</h1>
-          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</span>
-        </ion-row>
-        <ion-row class="ion-margin ion-align-items-end" style="height:150px">
-          <ion-button class="ion-margin-top" color="light" @click="() => router.push('/home/login')">
-            Start now
-            <ion-icon slot="end" :icon="arrowForward"></ion-icon>
-          </ion-button>
-        </ion-row>
-      </ion-grid>
-    </ion-content>
+    <login-container
+      title="Welcome back!"
+      subtitle="Log back into your account"
+      back="/">
+      <form>
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating">Username</ion-label>
+            <ion-input id="username" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input id="password" required type="password"></ion-input>
+            <a slot="end" class="password--show">
+              <ion-icon :icon="eye" slot="end"></ion-icon>
+            </a>
+          </ion-item>
+          <ion-text color="dark">
+            <p class="ion-margin">
+              <ion-icon :icon="toggle"></ion-icon>
+              Remember
+            </p>
+            <p>Forgot password?</p>
+          </ion-text>
+        </ion-list>
+        <ion-button class="ion-margin-top" @click="() => router.push('/menu/')">
+          Sing in
+        </ion-button>
+      </form>
+    </login-container>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonButton, IonGrid, IonRow, IonPage, IonIcon, IonContent } from '@ionic/vue';
-// import ExploreContainer from '@/components/ExploreContainer.vue';
-import { arrowForward } from 'ionicons/icons';
+import { IonText, IonLabel, IonInput, IonItem, IonList, IonButton, IonPage, IonIcon } from '@ionic/vue';
+import { eye, toggle } from 'ionicons/icons';
 import { useRouter } from 'vue-router';
+import LoginContainer from '../components/LoginContainer.vue';
 
 
 export default  {
   name: 'Tab1',
-  components: { IonButton, IonGrid, IonRow, IonIcon, IonContent, IonPage },
+  components: { IonText, IonLabel, IonInput, IonItem, IonList, IonButton, IonIcon, IonPage, LoginContainer },
   setup() {
     const router = useRouter();
     return {
-      arrowForward,
+      eye,
+      toggle,
       router
     }
   },
@@ -45,6 +59,11 @@ export default  {
 }
 </script>
 <style lang="sass" scoped>
+form
+  width: 100%
+  ion-button 
+    padding: 0 15px
+    width: 100%
 h1
   font-size: 37px
   font-weight: 800
@@ -52,4 +71,7 @@ h1
   margin-bottom: 25px
 span
   font-size: 16pt
+
+.password--show
+  padding-top: 30px
 </style>

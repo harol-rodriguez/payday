@@ -1,7 +1,7 @@
 <template>
   <ion-page>
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
+    <ion-content :fullscreen="true" class="full-color">
+      <ion-header collapse="condense" v-show="false">
         <ion-toolbar>
           <ion-title size="large">Tab 1</ion-title>
         </ion-toolbar>
@@ -17,7 +17,7 @@ import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue
 // import ExploreContainer from '@/components/ExploreContainer.vue';
 
 export default  {
-  name: 'Tab1',
+  name: 'transaction',
   components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
 }
 </script>

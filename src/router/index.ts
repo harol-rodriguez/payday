@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import TabsLayout from '../layouts/TabsLayout.vue'
-import ClearLayout from '../layouts/ClearLayout.vue'
+import Login from '../views/Login.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -13,34 +13,24 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/home.vue')
   },
   {
-    path: '/user/',
-    component: ClearLayout,
-    children: [
-      {
-        path: 'login',
-        component: () => import('@/views/Login.vue')
-      },
-      {
-        path: 'register',
-        component: () => import('@/views/Tab2.vue')
-      },
-      {
-        path: 'register2',
-        component: () => import('@/views/Tab3.vue')
-      }
-    ]
+    path: '/login',
+    component: Login,
   },
   {
-    path: '/tabs/',
+    path: '/menu/',
     component: TabsLayout,
     children: [
       {
         path: '',
-        redirect: '/tabs/tab1'
+        redirect: '/menu/index'
       },
       {
-        path: 'tab1',
-        component: () => import('@/views/Tab1.vue')
+        path: 'index',
+        component: () => import('@/views/Menu.vue')
+      },
+      {
+        path: 'getcash',
+        component: () => import('@/views/GetCash/PaymentAdvance.vue')
       },
       {
         path: 'tab2',

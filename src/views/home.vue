@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <ion-content :fullscreen="true" class="full-color">
+    <ion-content :fullscreen="true" class="home-color">
       <ion-grid class="ion-margin">
         <ion-row class="ion-margin ion-justify-content-left ion-align-items-end" style="height:150px">
           <img src="/assets/logo.png">
@@ -10,7 +10,7 @@
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</span>
         </ion-row>
         <ion-row class="ion-margin ion-align-items-end" style="height:150px">
-          <ion-button class="ion-margin-top" color="light" @click="() => router.push('/user/login')">
+          <ion-button class="ion-margin-top" color="light" @click="() => router.push('/login')">
             Start now
             <ion-icon slot="end" :icon="arrowForward"></ion-icon>
           </ion-button>
