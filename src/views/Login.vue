@@ -7,13 +7,13 @@
       <form>
         <ion-list>
           <ion-item>
-            <ion-label position="floating">Username</ion-label>
-            <ion-input id="username" required></ion-input>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input id="username" type="email" required></ion-input>
           </ion-item>
           <ion-item>
             <ion-label position="floating">Password</ion-label>
-            <ion-input id="password" required type="password"></ion-input>
-            <a slot="end" class="password--show">
+            <ion-input id="password" v-model="password" required :type="showPassword ? 'text' : 'password'"></ion-input>
+            <a slot="end" class="password--show" @click="showPassword=!showPassword">
               <ion-icon :icon="eye" slot="end"></ion-icon>
             </a>
           </ion-item>
@@ -22,12 +22,13 @@
               <ion-icon :icon="toggle"></ion-icon>
               Remember
             </p>
-            <p>Forgot password?</p>
+            <!-- <p>Forgot password?</p> -->
           </ion-text>
         </ion-list>
         <ion-button class="ion-margin-top" @click="() => router.push('/menu/')">
           Sing in
         </ion-button>
+        <p class="register">Don’t have an account? <a @click="() => router.push('/singup')">Sing Up</a></p>
       </form>
     </login-container>
   </ion-page>
@@ -49,6 +50,12 @@ export default  {
       eye,
       toggle,
       router
+    }
+  },
+  data(){
+    return {
+      showPassword: false,
+      password: ''
     }
   },
   methods: {
@@ -74,4 +81,10 @@ span
 
 .password--show
   padding-top: 30px
+
+.register
+  color: #000
+  font-size: 13px
+  text-align: center
+  margin-top: 60px
 </style>

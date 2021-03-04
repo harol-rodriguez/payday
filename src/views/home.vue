@@ -7,7 +7,7 @@
         </ion-row>
         <ion-row class="ion-margin-start ion-margin-bottom ion-justify-content-left">
           <h1>Welcome to payday</h1>
-          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</span>
+          <span>Get paid on advance for the work you have already done.</span>
         </ion-row>
         <ion-row class="ion-margin ion-align-items-end" style="height:150px">
           <ion-button class="ion-margin-top" color="light" @click="() => router.push('/login')">

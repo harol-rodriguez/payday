@@ -39,7 +39,7 @@ export default {
   padding-top: 30px;
   padding-left: 38px;
   h1 {
-    width: 100%;
+    width: 200px;
     font-weight: 800;
   }
   span {

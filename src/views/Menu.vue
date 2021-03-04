@@ -8,14 +8,25 @@
       </ion-header>
       <ion-grid>
         <ion-row class="ion-margin ion-justify-content-left header-icon">
-          <ion-icon :icon="chevronBack"></ion-icon>
+          <!-- <ion-icon :icon="chevronBack"></ion-icon> -->
         </ion-row>
         <ion-row class="header ion-margin-bottom ion-justify-content-left ion-align-items-end">
-          <div>
+          <div v-if="false">
             <h1>
               Let’s get started
             </h1>
             <span>Let’s start your financial journey:</span>
+          </div>
+          <div v-if="true">
+            <h1>
+              Hi Jhon Doe
+            </h1>
+            <div style="position: absolute;top: 77px;right: 50px;">
+              <ionAvatar>
+                <img src="/assets/avatar.svg">
+              </ionAvatar>
+            </div>
+            <span>Select an option to start</span>
           </div>
         </ion-row>
         <ion-row class="ion-justify-content-left menu-content">
@@ -24,6 +35,7 @@
               <ion-card-subtitle>Get cash anytime</ion-card-subtitle>
             </ion-card-header>
             <ion-card-content>
+              <div class="line" />
               Advance your wage on demand. Receive up to $XXX upfront for your first advance.
             </ion-card-content>
           </ion-card>
@@ -32,6 +44,7 @@
               <ion-card-subtitle>Financial Management</ion-card-subtitle>
             </ion-card-header>
             <ion-card-content>
+              <div class="line" />
               Advance your wage on demand. Receive up to $XXX upfront for your first advance.
             </ion-card-content>
           </ion-card>
@@ -40,6 +53,7 @@
               <ion-card-subtitle>Invest</ion-card-subtitle>
             </ion-card-header>
             <ion-card-content>
+              <div class="line" />
               Advance your wage on demand. Receive up to $XXX upfront for your first advance.
             </ion-card-content>
           </ion-card>
@@ -51,18 +65,16 @@
 </template>
 
 <script lang="ts">
-import { IonCardContent, IonCardSubtitle, IonCard, IonGrid, IonRow, IonPage, IonContent, IonIcon } from '@ionic/vue';
-import { chevronBack } from 'ionicons/icons';
+import { IonAvatar, IonCardContent, IonCardSubtitle, IonTitle, IonHeader, IonCardHeader, IonToolbar, IonCard, IonGrid, IonRow, IonPage, IonContent } from '@ionic/vue';
 import { useRouter } from 'vue-router';
 // import ExploreContainer from '@/components/ExploreContainer.vue';
 
 export default  {
   name: 'home',
-  components: { IonCardContent, IonCardSubtitle, IonCard ,IonGrid, IonRow, IonContent, IonPage, IonIcon },
+  components: { IonAvatar, IonCardContent, IonCardSubtitle, IonTitle, IonHeader, IonCardHeader, IonToolbar, IonCard ,IonGrid, IonRow, IonContent, IonPage },
   setup() {
     const router = useRouter();
     return {
-      chevronBack,
       router
     }
   }
@@ -74,7 +86,19 @@ export default  {
   padding: 0 35px
   h1
     font-weight: 800
-ion-card
-  width: 100%
-  margin: 24px 35px 0px
+.full-menu
+  ion-card-header
+    padding-bottom: 0
+  ion-card-subtitle
+    color: #5a81f2 !important
+  ion-card
+    width: 100%
+    margin: 24px 35px 0px
+    color: #a1a1a1
+  ion-card-content
+    font-size: 14px
+    .line
+      margin: 11px 0
+      border-top: 1px dashed #a7a7a7
+
 </style>
