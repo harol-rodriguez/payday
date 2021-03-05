@@ -26,9 +26,9 @@
           </ion-text>
         </ion-list>
         <ion-button class="ion-margin-top" @click="() => router.push('/menu/')">
-          Sing in
+          Sign in
         </ion-button>
-        <p class="register">Don’t have an account? <a @click="() => router.push('/singup')">Sing Up</a></p>
+        <p class="register">Don’t have an account? <a @click="() => router.push('/signup')">Sign Up</a></p>
       </form>
     </login-container>
   </ion-page>

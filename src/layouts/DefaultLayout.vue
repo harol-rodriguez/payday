@@ -10,7 +10,7 @@
           <div class="bullet bullet-right"></div>
         </div>
         <div class="login-separator" v-if="mode!=='ticket'"/>
-        <div class="logo-separator" v-else>payday</div>
+        <div class="logo-separator" v-else>PayDay</div>
         <slot />
       </ion-row>
     </ion-grid>

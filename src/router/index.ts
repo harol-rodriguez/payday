@@ -18,48 +18,48 @@ const routes: Array<RouteRecordRaw> = [
     component: Login,
   },
   {
-    path: '/singup/',
+    path: '/signup/',
     component: ClearLayout,
     children: [
       {
         path: '',
-        redirect: '/singup/register'
+        redirect: '/signup/register'
       },
       {
         path: 'register',
-        component: () => import('@/views/SingUp/Register.vue')
+        component: () => import('@/views/SignUp/Register.vue')
       },
       {
         path: 'personal-confirmation',
-        component: () => import('@/views/SingUp/PersonalConfirmation.vue')
+        component: () => import('@/views/SignUp/PersonalConfirmation.vue')
       },
       {
         path: 'birth',
-        component: () => import('@/views/SingUp/Birth.vue')
+        component: () => import('@/views/SignUp/Birth.vue')
       },
       {
         path: 'address',
-        component: () => import('@/views/SingUp/Address.vue')
+        component: () => import('@/views/SignUp/Address.vue')
       },
       {
         path: 'phone',
-        component: () => import('@/views/SingUp/Phone.vue')
+        component: () => import('@/views/SignUp/Phone.vue')
       },
       {
         path: 'code',
-        component: () => import('@/views/SingUp/Code.vue')
+        component: () => import('@/views/SignUp/Code.vue')
       },
       {
         path: 'ssn',
-        component: () => import('@/views/SingUp/SSN.vue')
+        component: () => import('@/views/SignUp/SSN.vue')
       },
       {
         path: 'details',
-        component: () => import('@/views/SingUp/Details.vue')
+        component: () => import('@/views/SignUp/Details.vue')
       },
       {
         path: 'confirm',
-        component: () => import('@/views/SingUp/Confirm.vue')
+        component: () => import('@/views/SignUp/Confirm.vue')
       },
     ]
   },

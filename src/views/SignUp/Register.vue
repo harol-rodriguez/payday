@@ -36,7 +36,7 @@
         </div>
         <br>
         <br>
-        <ion-button class="ion-margin-top" @click="() => router.push('/singup/personal-confirmation')">
+        <ion-button class="ion-margin-top" @click="() => router.push('/signup/personal-confirmation')">
           Confirm
         </ion-button>
       </form>

@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <full-layout back="/singup/" mode="full-color">
+    <full-layout back="/signup/" mode="full-color">
       <div class="confirma">
         <h1>Confirm your <br>details</h1>
         <span>Please make sure your information is accurate</span>
@@ -102,7 +102,7 @@
           </ion-card>
         </ion-row>
         <ion-button class="ion-margin-top" @click="() => router.push('/menu')">
-          Verify my identity
+          Verify my identify
         </ion-button>
       </div>
     </full-layout>

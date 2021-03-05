@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <full-layout back="/singup/" mode="full-color">
+    <full-layout back="/signup/" mode="full-color">
       <div class="personal-confirmation">
         <h1>Personal <br>confirmation</h1>
         <div class="content">
@@ -8,7 +8,7 @@
 
           <p>Please help us with a few more details to secure your identify so you can start getting the ca$h.</p>
         </div>
-        <ion-button class="ion-margin-top" @click="() => router.push('/singup/birth')">
+        <ion-button class="ion-margin-top" @click="() => router.push('/signup/birth')">
           Continue
         </ion-button>
       </div>

@@ -36,7 +36,7 @@
             </ion-card-header>
             <ion-card-content>
               <div class="line" />
-              Advance your wage on demand. Receive up to $XXX upfront for your first advance.
+              Advance your wage on demand. Receive up to $400 upfront for your first advance.
             </ion-card-content>
           </ion-card>
           <ion-card>
@@ -45,7 +45,7 @@
             </ion-card-header>
             <ion-card-content>
               <div class="line" />
-              Advance your wage on demand. Receive up to $XXX upfront for your first advance.
+              Build your credit score and optimize your expenses to get the most of your money.
             </ion-card-content>
           </ion-card>
           <ion-card>
@@ -54,7 +54,7 @@
             </ion-card-header>
             <ion-card-content>
               <div class="line" />
-              Advance your wage on demand. Receive up to $XXX upfront for your first advance.
+              Set your goals and start trading – start with $1 only
             </ion-card-content>
           </ion-card>
         </ion-row>

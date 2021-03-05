@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <full-layout back="/singup/">
+    <full-layout back="/signup/">
       <div class="register-step">
         <h1>What’s your address?</h1>
         <span>Make sure it’s your registered home address</span>
@@ -35,7 +35,7 @@
             </ion-col>
           </ion-row>
         </ion-grid>
-        <ion-button class="ion-margin-top" @click="() => router.push('/singup/phone')">
+        <ion-button class="ion-margin-top" @click="() => router.push('/signup/phone')">
           Next
         </ion-button>
       </div>

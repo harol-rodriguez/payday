@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <full-layout back="/singup/">
+    <full-layout back="/signup/">
       <div class="register-step">
         <h1>Verification</h1>
         <span>Enter 4 digit code send via text to <br>(xxx) yyy yyyy</span>
@@ -11,7 +11,7 @@
           <ion-label position="floating">Digit code</ion-label>
           <ion-input id="code" type="tel" required></ion-input>
         </ion-item>
-        <ion-button class="ion-margin-top" @click="() => router.push('/singup/ssn')">
+        <ion-button class="ion-margin-top" @click="() => router.push('/signup/ssn')">
           Get verified
         </ion-button>
       </div>

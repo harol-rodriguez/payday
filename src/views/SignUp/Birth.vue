@@ -1,13 +1,13 @@
 <template>
   <ion-page>
-    <full-layout back="/singup/">
+    <full-layout back="/signup/">
       <div class="register-step">
         <h1>What’s your date <br>of birth?</h1>
          <ion-item>
             <ion-label position="floating">MM/DD/YYYY</ion-label>
-            <ion-datetime display-format="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
+            <ion-datetime display-format="MM/DD/YYYY" min="1920-03-14" max="2012-12-09"></ion-datetime>
           </ion-item>
-        <ion-button class="ion-margin-top" @click="() => router.push('/singup/address')">
+        <ion-button class="ion-margin-top" @click="() => router.push('/signup/address')">
           Next
         </ion-button>
       </div>

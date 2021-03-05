@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <full-layout back="/singup/">
+    <full-layout back="/signup/">
       <div class="register-step">
         <h1>Employment details</h1>
         <span>Please select your employer</span>
@@ -16,7 +16,7 @@
           <ion-input id="employee" type="tel" required></ion-input>
         </ion-item>
         <a class="tooltip">Your company is not in the list? Get info</a>
-        <ion-button class="ion-margin-top" @click="() => router.push('/singup/confirm')">
+        <ion-button class="ion-margin-top" @click="() => router.push('/signup/confirm')">
           Next
         </ion-button>
       </div>
