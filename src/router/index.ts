@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import TabsLayout from '../layouts/TabsLayout.vue'
+import ClearLayout from '../layouts/ClearLayout.vue'
 import Login from '../views/Login.vue'
-import Register from '../views/SingUp/Register.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -18,8 +18,50 @@ const routes: Array<RouteRecordRaw> = [
     component: Login,
   },
   {
-    path: '/singup',
-    component: Register,
+    path: '/singup/',
+    component: ClearLayout,
+    children: [
+      {
+        path: '',
+        redirect: '/singup/register'
+      },
+      {
+        path: 'register',
+        component: () => import('@/views/SingUp/Register.vue')
+      },
+      {
+        path: 'personal-confirmation',
+        component: () => import('@/views/SingUp/PersonalConfirmation.vue')
+      },
+      {
+        path: 'birth',
+        component: () => import('@/views/SingUp/Birth.vue')
+      },
+      {
+        path: 'address',
+        component: () => import('@/views/SingUp/Address.vue')
+      },
+      {
+        path: 'phone',
+        component: () => import('@/views/SingUp/Phone.vue')
+      },
+      {
+        path: 'code',
+        component: () => import('@/views/SingUp/Code.vue')
+      },
+      {
+        path: 'ssn',
+        component: () => import('@/views/SingUp/SSN.vue')
+      },
+      {
+        path: 'details',
+        component: () => import('@/views/SingUp/Details.vue')
+      },
+      {
+        path: 'confirm',
+        component: () => import('@/views/SingUp/Confirm.vue')
+      },
+    ]
   },
   {
     path: '/menu/',

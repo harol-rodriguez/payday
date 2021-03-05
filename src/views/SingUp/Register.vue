@@ -36,11 +36,9 @@
         </div>
         <br>
         <br>
-        <a href="http://localhost:3000/singup">
-          <ion-button class="ion-margin-top">
-            Confirm
-          </ion-button>
-        </a>
+        <ion-button class="ion-margin-top" @click="() => router.push('/singup/personal-confirmation')">
+          Confirm
+        </ion-button>
       </form>
     </login-container>
   </ion-page>
